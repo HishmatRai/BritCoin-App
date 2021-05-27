@@ -10,12 +10,12 @@ export default function Retailer(props) {
       >
         <StatusBar style="auto" />
         <Text style={styles._heading}>ARE YOU A</Text>
-        <TouchableOpacity style={styles._Register_btn}>
+        <TouchableOpacity style={styles._Register_btn} onPress={() => props.navigation.navigate("Select")}>
           <Text style={styles._Register_btn_txt}>Retailer</Text>
           <Image source={require('./../../img/shop.png')} style={styles._shop} />
         </TouchableOpacity>
         <Text style={styles._heading2}>OR</Text>
-        <TouchableOpacity style={styles._Register_btn}>
+        <TouchableOpacity style={styles._Register_btn} onPress={() => props.navigation.navigate("Select")}>
           <Text style={styles._Register_btn_txt}>Customer</Text>
           <Image source={require('./../../img/Customer.png')} style={styles.Customer} />
         </TouchableOpacity>

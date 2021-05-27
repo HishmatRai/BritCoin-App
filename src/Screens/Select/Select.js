@@ -1,4 +1,3 @@
-import { Video } from 'expo-av';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, View, Text, ImageBackground, Image, TouchableOpacity } from 'react-native';
@@ -13,10 +12,10 @@ export default function Select(props) {
         <Image source={require('./../../img/loginLogo.png')} style={styles._logo} />
         <Text style={styles._heading}>PRIVATE & SECURE</Text>
         <Text style={styles.sub_Heading}>Private keys never leave your device</Text>
-        <TouchableOpacity style={styles._Register_btn}>
+        <TouchableOpacity style={styles._Register_btn}  onPress={() => props.navigation.navigate("Home")}>
           <Text style={styles._Register_btn_txt}>Register</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles._login_btn}>
+        <TouchableOpacity style={styles._login_btn} onPress={() => props.navigation.navigate("Home")}>
           <Text style={styles._Register_btn_txt}>Log in</Text>
         </TouchableOpacity>
         <View style={styles._line}></View>

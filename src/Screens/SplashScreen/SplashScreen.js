@@ -1,13 +1,16 @@
-import * as React from 'react';
+import  React,{useEffect} from 'react';
 import { View, StyleSheet,  } from 'react-native';
 import { Video, AVPlaybackStatus } from 'expo-av';
 
 export default function SplashScreen(props) {
   const video = React.useRef(null);
   const [status, setStatus] = React.useState({});
-  setTimeout(() => {
-    props.navigation.navigate("Select");
-  }, 8000);
+  useEffect(()=>{
+    setTimeout(() => {
+      props.navigation.navigate("Retailer");
+  
+    }, 8000);
+  },[])
 
   return (
     <View style={styles.container}>
