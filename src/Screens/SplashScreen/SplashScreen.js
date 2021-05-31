@@ -9,7 +9,7 @@ export default function SplashScreen(props) {
     setTimeout(() => {
       props.navigation.navigate("Retailer");
   
-    }, 8000);
+    }, 4000);
   },[])
 
   return (

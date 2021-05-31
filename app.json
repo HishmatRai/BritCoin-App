@@ -27,6 +27,10 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "com.BritCoin.BritCoin",
+      "versionCode": 1
     }
   }
 }

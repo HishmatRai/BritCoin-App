@@ -108,7 +108,7 @@ export default function Home(props) {
             <TouchableOpacity style={styles._tabs} onPress={() => props.navigation.navigate("Home")}>
               <Feather name="home" size={34} color="white" />
             </TouchableOpacity>
-            <TouchableOpacity style={styles._tabs}>
+            <TouchableOpacity style={styles._tabs} onPress={() => props.navigation.navigate("SelectACard")}>
               <Feather name="credit-card" size={24} color="#667d83" />
               <Text style={styles._tabs_text}>Transactions</Text>
             </TouchableOpacity>

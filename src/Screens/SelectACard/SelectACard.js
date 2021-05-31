@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, View, Text, ImageBackground, Image, TouchableOpacity, ScrollView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, Feather } from '@expo/vector-icons';
 export default function SelectACard(props) {
     return (
         <View style={styles.container}>
@@ -13,7 +13,7 @@ export default function SelectACard(props) {
                 <View style={{ height: 30 }}></View>
                 <ScrollView>
                     <Text style={styles._heading}>Select a Card</Text>
-                    <View style={styles._Card4}>
+                    <TouchableOpacity style={styles._Card4}  onPress={() => props.navigation.navigate("Overview")}>
                         <View style={styles._Card_header}>
                             <Text style={styles._card_price}>$4500.89</Text>
                             <View style={styles._card_second_post}>
@@ -32,8 +32,8 @@ export default function SelectACard(props) {
                             <Text style={styles._ibn_num}>**** **** *** </Text>
                             <Text style={styles._ibn_num}>ad1707ao</Text>
                         </View>
-                    </View>
-                    <View style={styles._Card5}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles._Card5} onPress={() => props.navigation.navigate("Overview")}>
                         <View style={styles._Card_header}>
                             <Text style={styles._card_price}>$4500.89</Text>
                             <View style={styles._card_second_post}>
@@ -52,8 +52,8 @@ export default function SelectACard(props) {
                             <Text style={styles._ibn_num}>**** **** *** </Text>
                             <Text style={styles._ibn_num}>ad1707ao</Text>
                         </View>
-                    </View>
-                    <View style={styles._Card6}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles._Card6} onPress={() => props.navigation.navigate("Overview")}>
                         <View style={styles._Card_header}>
                             <Text style={styles._card_price}>$4500.89</Text>
                             <View style={styles._card_second_post}>
@@ -72,8 +72,8 @@ export default function SelectACard(props) {
                             <Text style={styles._ibn_num}>**** **** *** </Text>
                             <Text style={styles._ibn_num}>ad1707ao</Text>
                         </View>
-                    </View>
-                    <View style={styles._Card7}>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles._Card7} onPress={() => props.navigation.navigate("Overview")}>
                         <View style={styles._Card_header}>
                             <Text style={styles._card_price}>$4500.89</Text>
                             <View style={styles._card_second_post}>
@@ -92,9 +92,25 @@ export default function SelectACard(props) {
                             <Text style={styles._ibn_num}>**** **** *** </Text>
                             <Text style={styles._ibn_num}>ad1707ao</Text>
                         </View>
-                    </View>
+                    </TouchableOpacity>
                 </ScrollView>
-                <View style={styles._line}></View>
+                {/* ===============> Tab Bar <============= */}
+                <View style={styles._tab_bar_main}>
+                    <View style={styles._tabs_show_main}>
+                        <TouchableOpacity style={styles._tabs} onPress={() => props.navigation.navigate("Swap")}>
+                            <Ionicons name="swap-horizontal" size={24} color="#667d83" />
+                            <Text style={styles._tabs_text}>Swap</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles._tabs} onPress={() => props.navigation.navigate("Home")}>
+                            <Feather name="home" size={34} color="#667d83" />
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles._tabs} onPress={() => props.navigation.navigate("SelectACard")}>
+                            <Feather name="credit-card" size={24} color="white" />
+                            <Text style={styles._tabs_text}>Transactions</Text>
+                        </TouchableOpacity>
+                    </View>
+                    <View style={styles._line}></View>
+                </View>
             </ImageBackground>
         </View>
     );
@@ -123,15 +139,6 @@ const styles = StyleSheet.create({
         fontSize: 15,
         letterSpacing: 1,
         marginTop: 20
-    },
-    _line: {
-        backgroundColor: "white",
-        width: "50%",
-        height: 10,
-        position: "absolute",
-        bottom: 20,
-        alignSelf: "center",
-        borderRadius: 20
     },
     _Card4: {
         backgroundColor: "#212a33",
@@ -235,6 +242,32 @@ const styles = StyleSheet.create({
         width: 100,
         height: 100
     },
-
+    _tab_bar_main: {
+        backgroundColor: "#042b64"
+    },
+    _tabs_show_main: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        width: "90%",
+        alignSelf: "center",
+        paddingVertical: 10
+    },
+    _tabs_text: {
+        color: "#667d83"
+    },
+    _tabs: {
+        alignItems: "center",
+        justifyContent: "center",
+        width: "30%"
+    },
+    _line: {
+        backgroundColor: "white",
+        width: "50%",
+        height: 5,
+        alignSelf: "center",
+        borderRadius: 20,
+        marginBottom: 10
+    },
 
 });
