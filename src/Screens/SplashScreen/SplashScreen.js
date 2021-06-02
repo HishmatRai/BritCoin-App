@@ -7,7 +7,7 @@ export default function SplashScreen(props) {
   const [status, setStatus] = React.useState({});
   useEffect(()=>{
     setTimeout(() => {
-      props.navigation.navigate("Retailer");
+      props.navigation.navigate("Select");
   
     }, 4000);
   },[])

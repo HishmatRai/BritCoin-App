@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
         width: 280,
         height: 280,
         alignSelf: "center",
-        marginTop:20
+        marginTop: 20
     },
     _heading: {
         color: "white",
@@ -48,11 +48,13 @@ const styles = StyleSheet.create({
         marginTop: 50
     },
     sub_Heading: {
-        color: "black",
+        color: "white",
         textAlign: "center",
-        fontSize: 15,
+        fontSize: 20,
         letterSpacing: 1,
-        marginTop: 20
+        marginTop: 20,
+        fontWeight: "bold",
+        marginHorizontal: 30
     },
     _Register_btn: {
         backgroundColor: "#092763",

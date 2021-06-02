@@ -9,10 +9,11 @@ export default function Select(props) {
         style={styles._image}
       >
         <StatusBar style="auto" />
-        <Image source={require('./../../img/loginLogo.png')} style={styles._logo} />
+        <Image source={require('./../../img/loginLogo2.png')} style={styles._logo} />
         <Text style={styles._heading}>PRIVATE & SECURE</Text>
         <Text style={styles.sub_Heading}>Private keys never leave your device</Text>
-        <TouchableOpacity style={styles._Register_btn}  onPress={() => props.navigation.navigate("Home")}>
+        <Text style={styles.sub_Heading2}>BRITCOIN WALLET</Text>
+        <TouchableOpacity style={styles._Register_btn} onPress={() => props.navigation.navigate("Retailer")}>
           <Text style={styles._Register_btn_txt}>Register</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles._login_btn} onPress={() => props.navigation.navigate("Home")}>
@@ -35,26 +36,36 @@ const styles = StyleSheet.create({
   },
   _logo: {
     width: 150,
-    height: 150,
+    height: 210,
     alignItems: "center",
     justifyContent: "center",
     alignSelf: "center",
-    marginTop: 100
+    marginTop: 50
   },
   _heading: {
     color: "white",
     fontWeight: "bold",
     textAlign: "center",
-    fontSize: 20,
+    fontSize: 34,
     letterSpacing: 1,
     marginTop: 20
   },
   sub_Heading: {
     color: "white",
     textAlign: "center",
-    fontSize: 15,
+    fontSize: 20,
     letterSpacing: 1,
-    marginTop: 20
+    marginTop: 0
+  },
+  sub_Heading2: {
+    color: "white",
+    textAlign: "center",
+    fontSize: 20,
+    letterSpacing: 1,
+    marginTop: 0,
+    marginTop: 50,
+    fontWeight: "bold",
+    marginBottom: 5
   },
   _Register_btn: {
     backgroundColor: "#092763",
@@ -62,7 +73,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     alignSelf: "center",
     borderRadius: 10,
-    marginTop: 50
   },
   _Register_btn_txt: {
     color: "white",
@@ -72,22 +82,22 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 10
   },
-  _login_btn:{
+  _login_btn: {
     width: "80%",
     alignItems: "center",
     alignSelf: "center",
     borderRadius: 10,
     marginTop: 20,
-    borderWidth:1,
-    borderColor:"white"
+    borderWidth: 1,
+    borderColor: "white"
   },
-  _line:{
-    backgroundColor:"white",
-    width:"50%",
-    height:10,
-    position:"absolute",
-    bottom:20,
-    alignSelf:"center",
-    borderRadius:20
+  _line: {
+    backgroundColor: "white",
+    width: "50%",
+    height: 10,
+    position: "absolute",
+    bottom: 20,
+    alignSelf: "center",
+    borderRadius: 20
   }
 });
